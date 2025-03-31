@@ -17,14 +17,17 @@
             <div class="text-white">
                 <a href="/">トップページ</a>
             </div>
+
             <div class="text-white">
-                 <a href="{{ route('todo.create') }}" class="create-form">フォーム作成</a>
-             </div>
+                <a href="{{ route('todo.create') }}" class="create-form">フォーム作成</a>
+            </div>
+
             <div class="text-white">
                 <a href="{{ route('dashboard') }}" class="login">ログイン</a>
             </div>
             <div class="text-white">
                 <a href="{{ route('register') }}" class="register">アカウント登録</a>
+        
             </div>    
     
         </div>
