@@ -1,4 +1,3 @@
-<!-- ver.2 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
