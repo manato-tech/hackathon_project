@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,6 +17,9 @@
             <div class="text-white">
                 <a href="/">トップページ</a>
             </div>
+            <div class="text-white">
+                 <a href="{{ route('todo.create') }}" class="create-form">フォーム作成</a>
+             </div>
             <div class="text-white">
                 <a href="{{ route('dashboard') }}" class="login">ログイン</a>
             </div>
