@@ -9,10 +9,10 @@
 
 <body class="flex flex-col h-screen">
     <header class="absolute inset-x-0 top-0 h-16 bg-slate-800 text-3xl flex justify-between items-center">
-    <div class="text-white">    
+    <div class="text-white px-5">    
             ToDoList
         </div>
-        <div class="flex space-x-5">
+        <div class="flex space-x-5 px-5">
             <div class="text-white">
                 <a href="/">トップページ</a>
             </div>
@@ -23,10 +23,10 @@
 
             
             <div class="text-white">
-                <a href="mypage.html" class="mylist">マイリスト</a>
+                <a href="{{ route('dashboard') }}" class="login">ログイン</a>
             </div>
             <div class="text-white">
-                <a href="toppage.html" class="logout">logout</a>
+                <a href="{{ route('register') }}" class="register">アカウント登録</a>
         
             </div>    
     
