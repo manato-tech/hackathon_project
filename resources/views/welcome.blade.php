@@ -21,7 +21,7 @@
                 <a href="mypage.html" class="mylist">マイリスト</a>
             </div>
             <div class="text-white">
-                <a href="toppage.html" class="logout">ログアウト</a>
+                <a href="toppage.html" class="logout">logout</a>
         
             </div>    
     
