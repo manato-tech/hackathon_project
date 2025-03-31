@@ -21,7 +21,7 @@
             <div class="flex">
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('toppage')" :active="request()->routeIs('toppage')">
                         {{ __('トップページ') }}
                     </x-nav-link>
                 </div>
@@ -46,6 +46,11 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('logout')" :active="request()->routeIs('logout')" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         {{ __('ログアウト') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
+                        {{ __('お問い合わせ') }}
                     </x-nav-link>
                 </div>
             </div>
