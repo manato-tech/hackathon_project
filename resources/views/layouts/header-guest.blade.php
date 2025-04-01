@@ -4,13 +4,11 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="/">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
-            </div>
 
-            <div class="flex">
                 <!-- Settings Dropdown -->
                 <div class="hidden sm:flex sm:items-center sm:ms-6">
                     <div>ようこそguestさん</div>
@@ -20,22 +18,22 @@
             <div class="flex">
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href='/' :active="request()->routeIs('/')">
+                    <x-nav-link href='/' :active="request()->routeIs('home')">
                         {{ __('トップページ') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href='login'>
+                    <x-nav-link href='login' :active="request()->routeIs('login')">
                         {{ __('ログイン') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href='register'>
+                    <x-nav-link href='register' :active="request()->routeIs('register')">
                         {{ __('アカウント登録') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                         {{ __('お問い合わせ') }}
                     </x-nav-link>
                 </div>

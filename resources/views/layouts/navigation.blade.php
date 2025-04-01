@@ -5,13 +5,11 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('toppage') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
-            </div>
 
-            <div class="flex">
                 <!-- Settings Dropdown -->
                 <div class="hidden sm:flex sm:items-center sm:ms-6">
                     <div>ようこそ{{ Auth::user()->name }}さん</div>
@@ -37,7 +35,7 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
-                        {{ __('アカウント情報') }}
+                        {{ __('アカウント管理') }}
                     </x-nav-link>
                 </div>
                 <form method="POST" action="{{ route('logout') }}" id="logout-form">
@@ -49,7 +47,7 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                         {{ __('お問い合わせ') }}
                     </x-nav-link>
                 </div>
