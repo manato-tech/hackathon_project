@@ -6,12 +6,13 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
+        <div class="p-6 bg-white shadow-md rounded-md border border-gray-300 max-w-7xl mx-auto">
+            <h2 class="text-xl font-bold text-gray-700 mb-4">リスト</h2>
+            <ul class="space-y-2 bg-gray-100 shadow-md rounded-md border-8 border-gray-800 rounded-md">
+                <li class="p-3">アイテム 1</li>
+                <li class="p-3">アイテム 2</li>
+                <li class="p-3">アイテム 3</li>
+            </ul>
         </div>
     </div>
 </x-app-layout>
