@@ -1,0 +1,10 @@
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+    <!-- Page footing -->
+    <footer class="flex bg-gray-800 justify-center text-white text-center py-4 mt-8">
+        <p>
+            ToDoList　
+            お問い合わせは
+            <a href="{{ route('contact') }}" class="text-blue-400 hover:text-blue-300 underline">こちら</a>
+        </p>
+    </footer>
+</nav>
