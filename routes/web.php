@@ -23,6 +23,8 @@ Route::middleware('auth')->group(function () {
         return view('contact');
     })->name('contact');
     Route::get('/create', [PostController::class, 'create'])->name('todo.create');
+    Route::post('post', [PostController::class, 'store'])->name('post.store');
+    Route::get('post', [PostController::class, 'index'])->name('posts.index');
 });
 
 require __DIR__.'/auth.php';
