@@ -12,7 +12,7 @@
                     <h1 class="text-4xl font-bold mb-6">Aim Higher</h1>
                     <intro>少しでもより良い生活の実現のため、あなたの仕事や家事の管理を手助けします。</intro>
                     <div class="space-x-4">
-                        <a href="{{ route('dashboard') }}" class="px-6 py-3 bg-blue-500 text-white rounded-lg text-lg">マイリスト</a>
+                        <a href="{{ route('posts.index') }}" class="px-6 py-3 bg-blue-500 text-white rounded-lg text-lg">マイリスト</a>
                         <a href="{{ route('todo.create') }}" class="px-6 py-3 bg-green-500 text-white rounded-lg text-lg">フォームの追加</a>
                     </div>
                 </div>
