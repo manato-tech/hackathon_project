@@ -37,19 +37,18 @@
                         <div class="text-center space-y-6">
                             <h1 class="text-4xl font-bold mb-6">お問い合わせフォーム</h1>
                             <intro>ご意見、不具合等ございましたら、下記のフォームに入力後に送信をクリックしてください。</intro>
-                            <form>
-                                @csrf
+                            <form action="{{ route('contact.send') }}" method="POST">
+    @csrf
 
-                                <div class="w-full flex flex-col">
-                                    <textarea name="body" class="w-full py-2 px-3 border border-gray-300 rounded-md" id="body" cols="30" rows="5" >
-                                    </textarea>
-                                </div>
+    <div class="w-full flex flex-col">
+        <textarea name="body" class="w-full py-2 px-3 border border-gray-300 rounded-md" id="body" cols="30" rows="5"></textarea>
+    </div>
 
-                                
-                                <x-primary-button type="submit" class="mt-4">
-                                    送信する
-                                </x-primary-button>
-                            </form>
+    <x-primary-button type="submit" class="mt-4">
+        送信する
+    </x-primary-button>
+</form>
+
                         </div>
                     </div>
                 </main>
