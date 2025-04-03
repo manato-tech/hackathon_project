@@ -18,9 +18,9 @@
                         </h1>
                         <div class="p-2 flex items-center space-x-2">
                             <a href="{{route('post.edit',$post)}}">
-                            <button class="px-4 text-lg border border-gray-800">
+                            <x-primary-button class="px-4 text-lg border border-gray-800">
                                 編集
-                            </button>
+                            </x-primary-button>
                             </a>
                             <form method="post" action="{{route('post.destroy',$post)}}">
                                 @csrf

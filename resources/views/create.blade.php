@@ -25,12 +25,11 @@
 
                 <div class="w-full flex flex-col">
                     <label for="body" class="font-semibold mt-4">本文</label>
-                    <textarea name="body" class="w-full py-2 px-3 border border-gray-300 rounded-md" id="body" cols="30" rows="5" >
-                    </textarea>
+                    <textarea name="body" class="w-full py-2 px-3 border border-gray-300 rounded-md" id="body" cols="30" rows="5" ></textarea>
                 </div>
 
                 <div class="mb-4">
-                    <x-primary-button type="submit" class="mt-4 ml-20">
+                    <x-primary-button type="submit" class="mt-4">
                         送信する
                     </x-primary-button>
                 </div>
