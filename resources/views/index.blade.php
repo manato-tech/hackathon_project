@@ -16,12 +16,18 @@
                             {{$post->title}}
                         </h1>
                         <div class="p-2 flex items-center space-x-2">
+                            <a href="{{route('post.edit',$post)}}">
                             <button class="px-4 text-lg border border-gray-800">
                                 編集
                             </button>
-                            <button class="px-4 text-lg border border-gray-800">
-                                削除
-                            </button>
+                            </a>
+                            <form method="post" action="{{route('post.destroy',$post)}}">
+                                @csrf
+                                @method('delete')
+                                <x-primary-button class="px-4 text-lg border border-gray-800">
+                                    削除
+                                </x-primary-button>
+                            </form>
                         </div>
                     </div>   
                     <hr class="w-full border-gray-400"> </hr>
