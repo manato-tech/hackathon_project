@@ -36,15 +36,10 @@
                     </p>
                 
 
-                    <div class="p-4">
-                        <p>
-                            <a class="font-semibold">
-                            {{$post->created_at}} 
-                            </a>
-                            <a class="text-xs">
-                            (作成日時)
-                            </a>
-                        </p>
+                    <div class="p-4 text-sm font-semibold">
+                    <p>
+                        {{$post->created_at}}/{{$post->user->name ?? '匿名'}} 
+                    </p>
                     </div>
                 </div>
                 @endforeach
