@@ -14,12 +14,18 @@
                         {{$post->title}}
                     </h1>
                     <div class="p-2 flex items-center space-x-2">
+                        <a href="{{route('post.edit',$post)}}">
                         <button class="px-4 text-lg border border-gray-800">
                             編集
                         </button>
-                        <button class="px-4 text-lg border border-gray-800">
+                        </a>
+                    <form method="post" action="{{route('post.destroy',$post)}}">
+                        @csrf
+                        @method('delete')
+                        <x-primary-button class="px-4 text-lg border border-gray-800">
                             削除
-                        </button>
+                        </x-primary-button>
+                    </form>
                     </div>
                 </div>   
                 <hr class="w-full">
@@ -30,7 +36,7 @@
 
                 <div class="p-4 text-sm font-semibold">
                     <p>
-                        {{$post->created_at}} 
+                        {{$post->created_at}}/{{$post->user->name ?? '匿名'}} 
                     </p>
                 </div>
             </div>
