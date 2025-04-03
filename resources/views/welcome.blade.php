@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <main class="flex justify-center my-auto bg-white max-w-max">
+    <main class="flex justify-center my-auto mx-auto bg-white max-w-max">
         <div class="text-center space-y-6">
             <h1 class="text-4xl font-bold mb-6">Aim Higher</h1>
             <intro>少しでもより良い生活の実現のため、あなたの仕事や家事の管理を手助けします。</intro>

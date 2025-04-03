@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }">
     <!-- Page footing -->
     <footer class="flex bg-gray-800 justify-center text-white text-center py-4 mt-8">
         <p>
