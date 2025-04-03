@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ContactController;
 
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 
 Route::get('/', function () {
@@ -30,6 +29,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/create', [PostController::class, 'create'])->name('todo.create');
     Route::post('post', [PostController::class, 'store'])->name('post.store');
     Route::get('post', [PostController::class, 'index'])->name('posts.index');
+    
+    Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+    Route::post('/show/{post}', [PostController::class, 'show'])->name('post.show');
+    Route::get('/{post}/edit', [PostController::class, 'edit'])->name('post.edit');
+    Route::patch('/{post}', [PostController::class, 'update'])->name('post.update');
+    Route::delete('/{post}', [PostController::class, 'destroy'])->name('post.destroy');
+    Route::get('/posts', [PostController::class, 'index'])->name('index');
+
 });
 
 require __DIR__.'/auth.php';
