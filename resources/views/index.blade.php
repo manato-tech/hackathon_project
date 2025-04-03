@@ -10,6 +10,7 @@
             <div class="sm:max-w-2xl mx-auto">
                 @foreach($posts as $post)
 
+
                 <div class="mt-4 py-2 px-8 bg-white w-full rounded-2xl border border-gray-800">
                     <div class="flex justify-between">
                         <h1 class="p-2 text-2xl font-semibold">
@@ -34,7 +35,6 @@
                     <p class="mt-4 p-4 font-semibold">
                         {{$post->body}}
                     </p>
-                
 
                     <div class="p-4 text-sm font-semibold">
                     <p>
