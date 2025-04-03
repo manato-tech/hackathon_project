@@ -5,9 +5,10 @@
         </h2>
     </x-slot>
 
+
     <div class="py-12">
         <main class="w-full sm:max-w-2xl mx-auto mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-            <div class="flex justify-center my-auto bg-white max-w-max">
+            <div class="flex justify-center my-auto mx-auto bg-white max-w-max">
                 <div class="text-center space-y-6">
                     <h1 class="text-4xl font-bold mb-6">Aim Higher</h1>
                     <intro>少しでもより良い生活の実現のため、あなたの仕事や家事の管理を手助けします。</intro>
@@ -19,4 +20,6 @@
             </div>
         </main>
     </div>
+
+
 </x-app-layout>
