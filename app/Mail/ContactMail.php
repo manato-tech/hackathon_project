@@ -7,7 +7,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMail extends Mailable
+
+// Mailable クラスを継承した子クラスで上書きする
+class ContactMail extends Mailable 
 {
     use Queueable, SerializesModels;
 

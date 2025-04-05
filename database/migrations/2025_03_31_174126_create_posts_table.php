@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->datetime('deadline')->nullable(); // ← 締切フォーム用のカラム
             $table->text('body');
             $table->timestamps();
         });

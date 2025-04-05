@@ -16,6 +16,7 @@ class PostController extends Controller
         $validated =  $request->validate([
             'title'=>'required|max:20',
             'body'=>'required|max:400',
+            'deadline' => 'nullable|date',
             
         ]);
         
@@ -45,6 +46,7 @@ class PostController extends Controller
         $validated =  $request->validate([
             'title'=>'required|max:20',
             'body'=>'required|max:400',
+            'deadline' => 'nullable|date',
         ]);
 
         $validated['user_id']=auth()->id();
