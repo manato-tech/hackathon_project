@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }">
     <!-- Page footing -->
-    <footer class="flex bg-gray-800 justify-center text-white text-center py-4 mt-8">
+    <footer class="flex bg-gray-800 justify-center text-white text-center py-4">
         <p>
             ToDoList　
             お問い合わせは

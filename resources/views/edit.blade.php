@@ -7,12 +7,6 @@
 
     <div class="py-12">
         <div class="max-w-3xl mx-auto px-6 bg-white shadow-md overflow-hidden sm:rounded-lg">
-            @if(session('message'))
-                <div class="text-red-600 font-bold">
-                    {{session('message')}}
-                </div>
-            @endif
-            
             <form method="post" action="{{ route('post.update',$post) }}" enctype="multipart/form-data">
                 @csrf
                 @method('patch')
@@ -34,12 +28,16 @@
 
                 <div class="mb-4">
                     <x-primary-button type="submit" class="mt-4">
-                        送信する
+                        更新する
                     </x-primary-button>
                 </div>
-
-            
             </form>
+            @if(session('message'))
+                <div class="text-red-600 font-bold">
+                    {{session('message')}}
+                </div>
+                <a href="{{ route('index') }}" class="text-blue-800">リストを確認する</a>
+            @endif
         </div>
     </div>
 </x-app-layout>

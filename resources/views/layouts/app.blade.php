@@ -30,7 +30,7 @@
             </div>
 
             <!-- Page Content -->
-            <main class="flex-grow">
+            <main class="flex-grow bg-[url('images/back.jpg')] bg-center bg-cover bg-fixed bg-no-repeat">
                 {{ $slot }}
             </main>
             <div class="sticky bottom-0">
