@@ -37,7 +37,9 @@
                         <div class="text-center space-y-6">
                             <h1 class="text-4xl font-bold mb-6">お問い合わせフォーム</h1>
                             <intro>ご意見、不具合等ございましたら、下記のフォームに入力後に送信をクリックしてください。</intro>
-                            <form action="{{ route('contact.send') }}" method="POST">
+
+
+<form action="{{ route('contact.send') }}" method="POST">
     @csrf
 
     <div class="w-full flex flex-col">
