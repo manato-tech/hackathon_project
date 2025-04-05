@@ -37,14 +37,14 @@
                     </p>
 
                     @if($post->deadline)
-                    <p class="px-4 pb-2 text-red-600 font-semibold text-sm">
-                        締切: {{ \Carbon\Carbon::parse($post->deadline)->format('Y年m月d日 H:i') }}
+                    <p class="px-4 pt-2 text-red-600 font-semibold text-sm">
+                        締切： {{ \Carbon\Carbon::parse($post->deadline)->format('Y年m月d日 H:i') }}
                     </p>
                     @endif
 
                     <div class="p-4 text-sm font-semibold">
                     <p>
-                        {{$post->created_at}}/{{$post->user->name ?? '匿名'}} 
+                        作成： {{$post->created_at}}/{{$post->user->name ?? '匿名'}} 
                     </p>
                     </div>
                 </div>
