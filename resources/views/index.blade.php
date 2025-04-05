@@ -6,7 +6,33 @@
     </x-slot>
     <div class="py-12">
         <div class="sm:max-w-3xl mx-auto px-6 py-6 bg-white rounded-2xl border">
-            <a class="text-3xl mx-5">ToDoList</a>
+            <div class="flex items-center justify-between">
+            <a class="flex text-3xl mx-5">ToDoList</a>
+            <form method="GET" action="{{ route('posts.index') }}" class="flex space-x-4 items-center mx-5">
+                {{-- ソート対象 --}}
+                <div>
+                    <label for="sort" class="mr-2 font-semibold">ソート項目:</label>
+                    <select name="sort" id="sort" class="border border-gray-300 rounded-md pr-8 py-1">
+                        <option value="created_at" {{ request('sort') === 'created_at' ? 'selected' : '' }}>作成日</option>
+                        <option value="deadline" {{ request('sort') === 'deadline' ? 'selected' : '' }}>締切</option>
+                    </select>
+                </div>
+
+                {{-- 昇順・降順 --}}
+                <div>
+                    <label for="direction" class="mr-2 font-semibold">順番:</label>
+                    <select name="direction" id="direction" class="border border-gray-300 rounded-md pr-8 py-1">
+                        <option value="asc" {{ request('direction') === 'asc' ? 'selected' : '' }}>昇順 ↑</option>
+                        <option value="desc" {{ request('direction') === 'desc' ? 'selected' : '' }}>降順 ↓</option>
+                    </select>
+                </div>
+
+                {{-- ボタン --}}
+                <x-primary-button type="submit" class="bg-blue-500 text-white px-2 py-1 rounded-md">
+                    並び替え
+                </x-primary-button>
+            </form>
+            </div>
             <div class="sm:max-w-2xl mx-auto">
                 @foreach($posts as $post)
 

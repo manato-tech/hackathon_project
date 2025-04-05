@@ -26,8 +26,11 @@ class PostController extends Controller
         $request->session()->flash('message','保存しました');
         return back();
     }
-    public function index(){
-        $posts=Post::all();
+    public function index(Request $request){
+        $sort = $request->input('sort', 'created_at'); // デフォルト: 作成日
+        $direction = $request->input('direction', 'asc'); // デフォルト: 昇順
+    
+        $posts = Post::orderBy($sort, $direction)->paginate(10);
         
         return view('index',compact('posts'));
     }
@@ -61,11 +64,9 @@ class PostController extends Controller
 
     public function destroy(Request $request,Post $post){
 
-        
-
         $post->delete();
         //sessionは一時保存
         $request->session()->flash('message','削除しました');
-        return redirect()->route('index');
+        return redirect()->route('posts.index');
     }
 }
