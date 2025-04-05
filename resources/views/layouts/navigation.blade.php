@@ -30,7 +30,7 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('todo.create')" :active="request()->routeIs('todo.create')">
-                        {{ __('フォームの追加') }}
+                        {{ __('タスクの追加') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">

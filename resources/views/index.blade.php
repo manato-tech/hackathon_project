@@ -25,7 +25,7 @@
                             <form method="post" action="{{route('post.destroy',$post)}}">
                                 @csrf
                                 @method('delete')
-                                <x-primary-button class="px-4 text-lg border border-gray-800">
+                                <x-primary-button type="submit" class="px-4 text-lg border border-gray-800">
                                     削除
                                 </x-primary-button>
                             </form>
