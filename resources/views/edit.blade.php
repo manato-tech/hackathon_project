@@ -11,6 +11,11 @@
                 @csrf
                 @method('patch')
 
+                <div class="w-full flex flex-col">
+                <label for="deadline" class="font-semibold mt-4">締切:</label>
+                <input type="datetime-local" name="deadline" id="deadline" class="w-full py-2 px-3 border border-gray-300 rounded-md">
+                </div>
+
                 <div class="mt-2">
                     <div class="w-full flex flex-col">
                         <label for="title" class="font-semibold mt-4">件名</label>
