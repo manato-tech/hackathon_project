@@ -15,46 +15,55 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 mx-auto">
-            @if(isset(Auth::user()->name))
+    <body class="font-sans bg-gray-800 antialiased">
+        <div class="flex flex-col min-h-screen bg-gray-100 mx-auto">
+            <div class="sticky top-0">
                 @include('layouts.navigation')
-            @else
-                @include('layouts.header-guest')
-            @endif
 
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        お問い合わせ
-                    </h2>
-                </div>
-            </header>
+                <!-- Page Heading -->
+                <header class="bg-white shadow">
+                    <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+                        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                            お問い合わせ
+                        </h2>
+                    </div>
+                </header>
+            </div>
 
-            <div class="py-12">
-                <main class="w-full sm:max-w-2xl mx-auto mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                    <div class="flex justify-center my-auto bg-white max-w-max">
-                        <div class="text-center space-y-6">
+
+            <main class="flex-grow bg-[url('images/back.jpg')] bg-center bg-cover bg-fixed bg-no-repeat">
+                <div class="py-12">
+                    <div class="w-full sm:max-w-3xl mx-auto mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+                        <div class="space-y-6">
+                            <div class="w-full text-center">
                             <h1 class="text-4xl font-bold mb-6">お問い合わせフォーム</h1>
-                            <intro>ご意見、不具合等ございましたら、下記のフォームに入力後に送信をクリックしてください。</intro>
+                            <p>ご意見、不具合等ございましたら、</p>
+                            <intro>下記のフォームに入力後に「送信する」をクリックしてください。</intro>
+                            </div>
 
+                            <form action="{{ route('contact.send') }}" method="POST">
+                                @csrf
 
-<form action="{{ route('contact.send') }}" method="POST">
-    @csrf
+                                <div class="w-full flex flex-col">
+                                    <textarea name="body" class="w-full py-2 px-3 border border-gray-300 rounded-md" id="body" cols="30" rows="5"></textarea>
+                                </div>
 
-    <div class="w-full flex flex-col">
-        <textarea name="body" class="w-full py-2 px-3 border border-gray-300 rounded-md" id="body" cols="30" rows="5"></textarea>
-    </div>
-
-    <x-primary-button type="submit" class="mt-4">
-        送信する
-    </x-primary-button>
-</form>
-
+                                <x-primary-button type="submit" class="mt-4">
+                                    送信する
+                                </x-primary-button>
+                            </form>
+                            @if (session('success'))
+                            <div class="mb-4">
+                                <div class="text-red-600 font-bold">
+                                    {{session('message')}}
+                                </div>
+                                <a href="{{ route('toppage') }}" class="text-blue-800 underline">トップページへ</a>
+                            </div>
+                            @endif
                         </div>
                     </div>
-                </main>
-            </div>
+                </div>
+            </main>
             @include('layouts.footer')
         </div>
     </body>

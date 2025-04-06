@@ -37,7 +37,7 @@
                 <div class="text-red-600 font-bold">
                     {{session('message')}}
                 </div>
-                <a href="{{ route('posts.index') }}" class="text-blue-800">リストを確認する</a>
+                <a href="{{ route('posts.index') }}" class="text-blue-800 underline">リストを確認する</a>
             </div>
             @endif
         </div>

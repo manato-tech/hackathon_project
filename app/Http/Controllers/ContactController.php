@@ -17,6 +17,6 @@ class ContactController extends Controller
         // メール送信
         Mail::to('5jdie167enkdi4@gmail.com')->send(new ContactMail($request->body));
 
-        return redirect()->back()->with('success', 'お問い合わせ内容を送信しました。');
+        return redirect()->back()->with('success', 'お問い合わせ内容を送信しました。ありがとうございます。');
     }
 }
