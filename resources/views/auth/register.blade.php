@@ -1,4 +1,11 @@
 <x-guest-layout>
+
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        アカウント登録
+        </h2>
+    </x-slot>
+    
     <form method="POST" action="{{ route('register') }}">
         @csrf
 

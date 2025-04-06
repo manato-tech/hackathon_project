@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('toppage') }}">
-                        <img src="{{ asset('images/logo.png') }}" alt="ロゴ" class="h-10 w-10 rounded-full object-cover bg-white"/>
+                        <img src="{{ asset('images/logo.png') }}" alt="ロゴ" class="h-12 w-12 rounded-full object-cover bg-white"/>
                     </a>
                 </div>
 

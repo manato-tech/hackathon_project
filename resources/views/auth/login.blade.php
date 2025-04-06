@@ -2,6 +2,12 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        ログイン
+        </h2>
+    </x-slot>
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -35,7 +41,7 @@
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
                 {{ __('パスワードをお忘れの方は') }}
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                <a class="underline text-sm text-blue-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                     {{ __('こちら') }}
                 </a>
             @endif
