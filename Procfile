@@ -1,1 +1,1 @@
-web: vendor/bin/hackathon-project public/
+web: vendor/bin/hackathon_project public/
