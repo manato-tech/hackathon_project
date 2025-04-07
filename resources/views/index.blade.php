@@ -13,8 +13,8 @@
                 <div>
                     <label for="sort" class="mr-2 font-semibold">ソート項目:</label>
                     <select name="sort" id="sort" class="border border-gray-300 rounded-md pr-8 py-1">
-                        <option value="created_at" {{ request('sort') === 'created_at' ? 'selected' : '' }}>作成日</option>
-                        <option value="deadline" {{ request('sort') === 'deadline' ? 'selected' : '' }}>締切</option>
+                        <option value="created_at" @selected($sort === 'created_at')>作成日</option>
+                        <option value="deadline" @selected($sort === 'deadline')>締切</option>
                     </select>
                 </div>
 
@@ -22,8 +22,8 @@
                 <div>
                     <label for="direction" class="mr-2 font-semibold">順番:</label>
                     <select name="direction" id="direction" class="border border-gray-300 rounded-md pr-8 py-1">
-                        <option value="asc" {{ request('direction') === 'asc' ? 'selected' : '' }}>昇順 ↑</option>
-                        <option value="desc" {{ request('direction') === 'desc' ? 'selected' : '' }}>降順 ↓</option>
+                        <option value="asc" @selected($direction === 'asc')>昇順 ↑</option>
+                        <option value="desc" @selected($direction === 'desc')>降順 ↓</option>
                     </select>
                 </div>
 
@@ -35,7 +35,6 @@
             </div>
             <div class="sm:max-w-2xl mx-auto">
                 @foreach($posts as $post)
-
 
                 <div class="mt-4 py-2 px-8 bg-white w-full rounded-2xl border border-gray-800">
                     <div class="flex justify-between">
