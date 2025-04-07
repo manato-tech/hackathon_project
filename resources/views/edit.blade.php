@@ -11,11 +11,6 @@
                 @csrf
                 @method('patch')
 
-                <div class="w-full flex flex-col">
-                <label for="deadline" class="font-semibold mt-4">締切:</label>
-                <input type="datetime-local" name="deadline" id="deadline" class="w-full py-2 px-3 border border-gray-300 rounded-md">
-                </div>
-
                 <div class="mt-2">
                     <div class="w-full flex flex-col">
                         <label for="title" class="font-semibold mt-4">件名</label>
@@ -29,6 +24,11 @@
                     <label for="body" class="font-semibold mt-4">本文</label>
                     <x-input-error :messages="$errors->get('body')"class="mt-2"/>
                     <textarea name="body" class="w-full py-2 px-3 border border-gray-300 rounded-md" id="body" cols="30" rows="5" placeholder="本文を入力してください">{{old('body',$post->body)}}</textarea>
+                </div>
+
+                <div class="w-full flex flex-col">
+                <label for="deadline" class="font-semibold mt-4">締切:</label>
+                <input type="datetime-local" name="deadline" id="deadline" class="w-full py-2 px-3 border border-gray-300 rounded-md" value="{{ old('deadline', $post->deadline) }}">
                 </div>
 
                 <div class="mb-4">
